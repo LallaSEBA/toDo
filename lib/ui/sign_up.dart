@@ -57,9 +57,13 @@ class SignUpState extends State<SignUp>{
   }                               
   @override
   Widget build(BuildContext context) {
-    double paddingBeforTopRaisedBtn2  = mainHeight(context)*0.072;    //63.5/896
-    double paddingUnderRaisedBtn2     = mainHeight(context)*0.06;    //73/896
-
+    double paddingBeforTopRaisedBtn2  = mainHeight(context)*0.05;    //63.5/896
+    double paddingUnderRaisedBtn2     = mainHeight(context)*0.055;    //73/896
+    //67/896
+           //67/896
+    double beforTgDev               = mainHeight(context)*0.03;    //67/896
+    double hTgDev                   = mainHeight(context)*0.05; 
+    
     return new Scaffold(
       backgroundColor: color_Backgrnd,
        body: new Stack(
@@ -82,7 +86,7 @@ class SignUpState extends State<SignUp>{
             Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[ 
-                Padding(padding: EdgeInsets.only(top: paddingBeforTopField(context)),),
+                Padding(padding: EdgeInsets.only(top: paddingBeforTopField(context)-12),),
                 Container(
                   width : widthTextField(context),
                   height: heightTextField(context),
@@ -107,8 +111,8 @@ class SignUpState extends State<SignUp>{
                   child :textFieldWiget(str_cPassword, confirmPasswordController, true),
                 ),
 
-                errorText.trim() == '' ? Text('', style:TextStyle(fontSize: 0)) 
-                                       : errorTextWidget(errorText),
+                /*errorText.trim() == '' ? Text('', ) 
+                                       :*/ errorTextWidget(errorText),
 
                 Padding(padding: EdgeInsets.only(top: paddingBeforTopRaisedBtn2),),
                 raisedBtnWidget(str_createAcc, signUpFun, context),
@@ -121,6 +125,11 @@ class SignUpState extends State<SignUp>{
                     inkWell(str_signIn, goToSignIn),
                   ],
                 ),
+                Padding(padding: EdgeInsets.only(top: beforTgDev),),
+                Container(
+                  height: hTgDev,
+                  child: Center(child: Text('By\nTG Developers', style:TextStyle(fontFamily:fntfutura, fontSize:10), textAlign: TextAlign.center,))
+                )
               ],
             ),
           ],

@@ -1,7 +1,7 @@
 
 
 const String str_name          = 'Name';
-const String str_register      = 'Don''t have an account ?  ';
+const String str_register      = 'Don\'t have an account ?  ';
 const String str_email         = 'Email';
 const String str_password      = 'Password';
 const String str_cPassword     = 'Confirm Password';
@@ -9,7 +9,7 @@ const String str_cPassword     = 'Confirm Password';
 const String str_enterEmail    = 'Enter your address Email';
 const String str_adEmail       = 'Address Email';
 
-const String str_dontHaveAcc   = 'Don''t have an account ? ';
+const String str_dontHaveAcc   = 'Don\'t have an account ? ';
 const String str_haveAcc       = 'Already have an account ? ';
 
 const String str_createAcc     = 'Sign up';

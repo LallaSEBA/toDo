@@ -68,7 +68,9 @@ initState(){
     double paddingBeforTopFlatBtn   = mainHeight(context)*0.02;       //16.5/896
 
     double paddingBeforTopRaisedBtn = mainHeight(context)*0.1;       //67/896
-    double paddingUnderRaisedBtn    = mainHeight(context)*0.17;        //188/896
+    double paddingUnderRaisedBtn    = mainHeight(context)*0.085;         //67/896
+    double beforTgDev               = mainHeight(context)*0.03;    //67/896
+    double hTgDev                   = mainHeight(context)*0.05;       //188/896
 
 
     return new Scaffold(
@@ -108,8 +110,8 @@ initState(){
                   child  : textFieldWiget(str_password , _passwordController, true),
                 ),
 
-                errorText.trim()=='' ? Text('', style:TextStyle(fontSize: 0)) 
-                                     : errorTextWidget(errorText),           
+               /* errorText.trim()=='' ? Text('', ) 
+                                     :*/ errorTextWidget(errorText),           
                                
                 Padding(padding: EdgeInsets.only(top: paddingBeforTopFlatBtn),),
                 Container(
@@ -130,6 +132,12 @@ initState(){
                     ],
                   ),
                 ),
+                
+                Padding(padding: EdgeInsets.only(top: beforTgDev),),
+                Container(
+                  height: hTgDev,
+                  child: Center(child: Text('By\nTG Developers', style:TextStyle(fontFamily:fntfutura, fontSize:10), textAlign: TextAlign.center,))
+                )
               ],
             ),
           ],
